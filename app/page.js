@@ -61,51 +61,67 @@ export default function LandingPage() {
         </ul>
       </section>
 
-      {/* Opt-In Form */}
-      <section style={{ maxWidth: '500px', margin: '0 auto 64px', textAlign: 'center' }}>
-        <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>
+      {/* Mailchimp Form */}
+      <section style={{ maxWidth: '500px', margin: '0 auto 64px' }}>
+        <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px', textAlign: 'center' }}>
           Ready to stop rewriting the same script and start building a career?
         </h4>
-        <form style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          <input
-            type="text"
-            placeholder="First Name"
-            style={{
-              width: '100%',
-              padding: '12px',
-              border: '1px solid #d1d5db',
-              borderRadius: '6px',
-              fontSize: '16px'
-            }}
-          />
-          <input
-            type="email"
-            placeholder="Email Address"
-            style={{
-              width: '100%',
-              padding: '12px',
-              border: '1px solid #d1d5db',
-              borderRadius: '6px',
-              fontSize: '16px'
-            }}
-          />
-          <button
-            type="submit"
-            style={{
-              width: '100%',
-              backgroundColor: 'black',
-              color: 'white',
-              padding: '12px',
-              borderRadius: '6px',
-              border: 'none',
-              fontSize: '16px',
-              cursor: 'pointer',
-              fontWeight: '500'
-            }}
-          >
-            ✅ Download the 10 Rules
-          </button>
-        </form>
+        <div id="mc_embed_shell">
+          <div id="mc_embed_signup" style={{ background: '#fff', clear: 'left', width: '100%' }}>
+            <form 
+              action="https://app.us4.list-manage.com/subscribe/post?u=ca0b20880c4b7009f8c6319e9&id=60a3c9abaa&f_id=002d04e3f0" 
+              method="post" 
+              id="mc-embedded-subscribe-form" 
+              name="mc-embedded-subscribe-form" 
+              className="validate" 
+              target="_blank"
+              style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}
+            >
+              <div id="mc_embed_signup_scroll">
+                <input 
+                  type="email" 
+                  name="EMAIL" 
+                  className="required email" 
+                  id="mce-EMAIL" 
+                  required 
+                  placeholder="Email Address"
+                  style={{
+                    width: '100%',
+                    padding: '12px',
+                    border: '1px solid #d1d5db',
+                    borderRadius: '6px',
+                    fontSize: '16px',
+                    boxSizing: 'border-box'
+                  }}
+                />
+                <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
+                  <input type="text" name="b_ca0b20880c4b7009f8c6319e9_60a3c9abaa" tabIndex="-1" />
+                </div>
+                <button
+                  type="submit"
+                  name="subscribe"
+                  id="mc-embedded-subscribe"
+                  style={{
+                    width: '100%',
+                    backgroundColor: 'black',
+                    color: 'white',
+                    padding: '12px',
+                    borderRadius: '6px',
+                    border: 'none',
+                    fontSize: '16px',
+                    cursor: 'pointer',
+                    fontWeight: '500'
+                  }}
+                >
+                  ✅ Get Access to The 10 Rules
+                </button>
+                <p style={{ textAlign: 'center', marginTop: '12px', fontSize: '14px', color: '#666' }}>
+                  After subscribing, you'll be redirected to access the guide in our Skool community.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
       </section>
 
       {/* Footer Call to Action */}
@@ -118,6 +134,15 @@ export default function LandingPage() {
           writing life that doesn't need one.
         </p>
       </footer>
+
+      {/* Redirect Script */}
+      <script dangerouslySetInnerHTML={{__html: `
+        document.getElementById('mc-embedded-subscribe-form').addEventListener('submit', function(e) {
+          setTimeout(function() {
+            window.location.href = 'https://www.skool.com/the-writers-forge/j-david-stems-10-iron-clad-rules-for-a-writing-life?p=c06dc1c4';
+          }, 1000);
+        });
+      `}} />
     </main>
   );
 }
