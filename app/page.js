@@ -50,7 +50,7 @@ export default function LandingPage() {
         margin: '0 auto 40px'
       }}>
         <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '16px' }}>
-          📥 Download my free guide: "The 10 Rules for a Writing Life"
+          📥 Get my free guide: "The 10 Rules for a Writing Life"
         </h3>
         <ul style={{ listStyle: 'disc', paddingLeft: '20px', lineHeight: '1.8' }}>
           <li>Why 99% of writers fail — and how to avoid becoming one of them</li>
@@ -62,9 +62,9 @@ export default function LandingPage() {
       </section>
 
       {/* Mailchimp Form */}
-      <section style={{ maxWidth: '500px', margin: '0 auto 64px' }}>
+      <section style={{ maxWidth: '500px', margin: '0 auto 32px' }}>
         <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px', textAlign: 'center' }}>
-          Ready to stop rewriting the same script and start building a career?
+          Step 1: Join the community
         </h4>
         <div id="mc_embed_shell">
           <div id="mc_embed_signup" style={{ background: '#fff', clear: 'left', width: '100%' }}>
@@ -113,15 +113,41 @@ export default function LandingPage() {
                     fontWeight: '500'
                   }}
                 >
-                  ✅ Get Access to The 10 Rules
+                  ✅ Subscribe
                 </button>
-                <p style={{ textAlign: 'center', marginTop: '12px', fontSize: '14px', color: '#666' }}>
-                  After subscribing, you'll be redirected to access the guide in our Skool community.
-                </p>
               </div>
             </form>
           </div>
         </div>
+      </section>
+
+      {/* Direct Link to Skool */}
+      <section style={{ maxWidth: '500px', margin: '0 auto 64px', textAlign: 'center' }}>
+        <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>
+          Step 2: Get the 10 Rules
+        </h4>
+        <a 
+          href="https://www.skool.com/the-writers-forge/j-david-stems-10-iron-clad-rules-for-a-writing-life?p=c06dc1c4"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: 'block',
+            width: '100%',
+            backgroundColor: '#059669',
+            color: 'white',
+            padding: '12px',
+            borderRadius: '6px',
+            fontSize: '16px',
+            fontWeight: '500',
+            textDecoration: 'none',
+            textAlign: 'center'
+          }}
+        >
+          📖 Access The 10 Rules Now →
+        </a>
+        <p style={{ marginTop: '12px', fontSize: '14px', color: '#666' }}>
+          Click here after subscribing to read the guide in our Skool community
+        </p>
       </section>
 
       {/* Footer Call to Action */}
@@ -134,15 +160,6 @@ export default function LandingPage() {
           writing life that doesn't need one.
         </p>
       </footer>
-
-      {/* Redirect Script */}
-      <script dangerouslySetInnerHTML={{__html: `
-        document.getElementById('mc-embedded-subscribe-form').addEventListener('submit', function(e) {
-          setTimeout(function() {
-            window.location.href = 'https://www.skool.com/the-writers-forge/j-david-stems-10-iron-clad-rules-for-a-writing-life?p=c06dc1c4';
-          }, 1000);
-        });
-      `}} />
     </main>
   );
 }
