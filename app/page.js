@@ -69,7 +69,7 @@ export default function LandingPage() {
         <div id="mc_embed_shell">
           <div id="mc_embed_signup" style={{ background: '#fff', clear: 'left', width: '100%' }}>
             <form 
-              action="https://app.us4.list-manage.com/subscribe/post?u=ca0b20880c4b7009f8c6319e9&id=60a3c9abaa&f_id=002d04e3f0" 
+              action="https://app.us4.list-manage.com/subscribe/post?u=ca0b20880c4b7009f8c6319e9&id=60a3c9abaa&f_id=00d305e3f0" 
               method="post" 
               id="mc-embedded-subscribe-form" 
               name="mc-embedded-subscribe-form" 
