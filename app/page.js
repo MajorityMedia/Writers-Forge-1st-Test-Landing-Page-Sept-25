@@ -1,4 +1,21 @@
+'use client';
+
+import { useEffect } from 'react';
+
 export default function LandingPage() {
+  useEffect(() => {
+    // Intercept form submission to add redirect
+    const form = document.getElementById('mc-embedded-subscribe-form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        // Let the form submit to Mailchimp
+        setTimeout(() => {
+          window.location.href = 'https://www.skool.com/the-writers-forge/j-david-stems-10-iron-clad-rules-for-a-writing-life?p=c06dc1c4';
+        }, 500);
+      });
+    }
+  }, []);
+
   return (
     <main style={{
       minHeight: '100vh',
@@ -62,26 +79,24 @@ export default function LandingPage() {
       </section>
 
       {/* Mailchimp Form */}
-      <section style={{ maxWidth: '500px', margin: '0 auto 32px' }}>
+      <section style={{ maxWidth: '500px', margin: '0 auto 64px' }}>
         <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px', textAlign: 'center' }}>
-          Step 1: Join the community
+          Ready to stop rewriting the same script and start building a career?
         </h4>
         <div id="mc_embed_shell">
           <div id="mc_embed_signup" style={{ background: '#fff', clear: 'left', width: '100%' }}>
             <form 
-              action="https://app.us4.list-manage.com/subscribe/post?u=ca0b20880c4b7009f8c6319e9&id=60a3c9abaa&f_id=00d305e3f0" 
+              action="https://skool.us18.list-manage.com/subscribe/post?u=8145844249148cedbd4f311b5&id=db14e826be&f_id=00e5b3e6f0" 
               method="post" 
               id="mc-embedded-subscribe-form" 
-              name="mc-embedded-subscribe-form" 
-              className="validate" 
-              target="_blank"
+              name="mc-embedded-subscribe-form"
+              target="_self"
               style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}
             >
               <div id="mc_embed_signup_scroll">
                 <input 
                   type="email" 
                   name="EMAIL" 
-                  className="required email" 
                   id="mce-EMAIL" 
                   required 
                   placeholder="Email Address"
@@ -95,7 +110,7 @@ export default function LandingPage() {
                   }}
                 />
                 <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
-                  <input type="text" name="b_ca0b20880c4b7009f8c6319e9_60a3c9abaa" tabIndex="-1" />
+                  <input type="text" name="b_8145844249148cedbd4f311b5_db14e826be" tabIndex={-1} />
                 </div>
                 <button
                   type="submit"
@@ -113,41 +128,15 @@ export default function LandingPage() {
                     fontWeight: '500'
                   }}
                 >
-                  ✅ Subscribe
+                  ✅ Get The 10 Rules Now
                 </button>
+                <p style={{ textAlign: 'center', marginTop: '12px', fontSize: '14px', color: '#666' }}>
+                  You'll be redirected to access the guide after subscribing
+                </p>
               </div>
             </form>
           </div>
         </div>
-      </section>
-
-      {/* Direct Link to Skool */}
-      <section style={{ maxWidth: '500px', margin: '0 auto 64px', textAlign: 'center' }}>
-        <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>
-          Step 2: Get the 10 Rules
-        </h4>
-        <a 
-          href="https://www.skool.com/the-writers-forge/j-david-stems-10-iron-clad-rules-for-a-writing-life?p=c06dc1c4"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: 'block',
-            width: '100%',
-            backgroundColor: '#059669',
-            color: 'white',
-            padding: '12px',
-            borderRadius: '6px',
-            fontSize: '16px',
-            fontWeight: '500',
-            textDecoration: 'none',
-            textAlign: 'center'
-          }}
-        >
-          📖 Access The 10 Rules Now →
-        </a>
-        <p style={{ marginTop: '12px', fontSize: '14px', color: '#666' }}>
-          Click here after subscribing to read the guide in our Skool community
-        </p>
       </section>
 
       {/* Footer Call to Action */}
